@@ -9,6 +9,10 @@ import { StockComponent } from './components/stock/stock.component';
 import { Code404Component } from './components/code404/code404.component';
 import { BuyerListComponent } from './components/buyer-list/buyer-list.component';
 import { SellerListComponent } from './components/seller-list/seller-list.component';
+import { ConsultComponent } from './components/consult/consult.component';
+import {PermissionGuard} from "./components/guard/permission.guard";
+import {FocusGuard} from "./components/guard/focus.guard";
+import {StockResolve} from "./components/guard/stock.resolve";
 
 
 @NgModule({
@@ -18,13 +22,14 @@ import { SellerListComponent } from './components/seller-list/seller-list.compon
     StockComponent,
     Code404Component,
     BuyerListComponent,
-    SellerListComponent
+    SellerListComponent,
+    ConsultComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PermissionGuard, FocusGuard, StockResolve],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

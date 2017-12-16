@@ -1,13 +1,21 @@
-<p>
-  stock works!
-</p>
-<p>
-  股票ID是{{stockId}}
-</p>
-<p>
-  isPro是{{isPro}}
-</p>
+<div class="stock">
+  <p>
+    stock works!
+  </p>
+  <p>
+    股票ID是{{stock.id}}
+  </p>
+  <p>
+    股票name是{{stock.name}}
+  </p>
+  <p>
+    isPro是{{isPro}}
+  </p>
+  <p>
+    <button (click)="focus = true">关注</button>
+  </p>
 
-<a routerLink="buyer">买家</a>
-<a routerLink="seller/100">卖家</a>
-<router-outlet></router-outlet>
+  <a routerLink="buyer">买家</a>
+  <a routerLink="seller/100">卖家</a>
+  <router-outlet></router-outlet>
+</div>
