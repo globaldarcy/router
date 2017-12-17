@@ -8,6 +8,12 @@
   <input type="button" value="股票" (click)="toStockDetail()">
   <a [routerLink]="[{outlets: {primary: 'home', aux: 'consult'}}]">开始咨询</a>
   <a [routerLink]="[{outlets: {primary: 'home', aux: null}}]">结束咨询</a>
+  <app-stock2></app-stock2>
+  <app-stock3></app-stock3>
+
+
+
+
 </div>
 
 <router-outlet></router-outlet>
